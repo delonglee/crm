@@ -41,6 +41,21 @@
 		});
 	});
 	
+	//更新销售机会客户流失状态
+	function updatecustomerLossStatus(status) {
+		$.post("${ctx}/customerLoss/updateStatus.action",
+			{id:'${param.lossId}',status:status},
+			function(result){
+				if (result.status === Util.SUCCESS) {
+					$.messager.alert("系统提示",'执行成功')
+				}else{
+					 $.messager.alert("系统提示","执行失败！");
+				}
+			}
+		);
+				
+	}
+	
 		
 </script>
 </head>
@@ -76,6 +91,7 @@
 		 	<a href="javascript:$('#datagrid').edatagrid('destroyRow')" class="easyui-linkbutton" iconCls="icon-remove" plain="true">删除</a>
 		 	<a href="javascript:$('#datagrid').edatagrid('cancelRow')" class="easyui-linkbutton" iconCls="icon-undo" plain="true">撤销行</a>
 		 	<a href="javascript:$('#datagrid').edatagrid('saveRow');$('#datagrid').edatagrid('reload');" class="easyui-linkbutton" iconCls="icon-save" plain="true">保存</a>
+		 	<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-zzkf" plain="true" onclick="updatecustomerLossStatus(1)">确认流失</a>
 	 	</c:if>
 	 </div>
 	<!-- toolbar 结束 -->

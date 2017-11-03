@@ -93,4 +93,6 @@ public interface CustomerLinkmanMapper {
      * @mbggenerated Mon Oct 30 13:49:55 CST 2017
      */
     int updateByPrimaryKey(CustomerLinkman record);
+
+	List<CustomerLinkman> findLinkMan();
 }

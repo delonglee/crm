@@ -50,8 +50,15 @@ public class DataDicController {
 		return dataDicService.findDataDicName();
 	}
 	@RequestMapping("/findLevel")
-	@ResponseBody List<DataDic> findLevel(){
+	@ResponseBody 
+	public List<DataDic> findLevel(){
 		return dataDicService.findLevel();
+	}
+	
+	@RequestMapping("/findService")
+	@ResponseBody
+	public List<DataDic> findService(){
+		return dataDicService.findService();
 	}
 
 }

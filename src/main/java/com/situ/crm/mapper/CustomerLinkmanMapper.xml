@@ -315,4 +315,8 @@
       phone = #{phone,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  
+  <select id="findLinkMan" resultMap="BaseResultMap">
+  	SELECT link_name FROM customer_linkman
+  </select>
 </mapper>

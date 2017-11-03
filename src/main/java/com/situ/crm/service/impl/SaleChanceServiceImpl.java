@@ -122,11 +122,11 @@ public class SaleChanceServiceImpl implements ISaleChanceService{
 	}
 
 	@Override
-	public ServerResponse updateDevResult(Integer saleChanceId, Integer devResult) {
+	public ServerResponse updateDevResult(Integer id, Integer devResult) {
 		// TODO Auto-generated method stub
 		SaleChance saleChance = new SaleChance();
 		
-		saleChance.setId(saleChanceId);
+		saleChance.setId(id);
 		saleChance.setDevResult(devResult);
 		if (saleChanceMapper.updateByPrimaryKeySelective(saleChance)>0) {
 			return ServerResponse.createSuccess("开发成功！");

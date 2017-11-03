@@ -44,22 +44,16 @@ public class CustomerLossController {
 		return customerLossService.update(customerLoss);
 	}
 	
-	@RequestMapping("/findCustomerLossStatus")
-	@ResponseBody
-	public List<CustomerLoss> findCustomerLossStatus(){
-		return customerLossService.findCustomerLossStatus();
-	}
-	
-	@RequestMapping("/findCustomerLossDevResult")
-	@ResponseBody
-	public List<CustomerLoss> findCustomerLossDevResult(){
-		return customerLossService.findCustomerLossStatus();
-	}
-	
 	@RequestMapping("/findById")
 	@ResponseBody
 	public ServerResponse findById(Integer id){
 		return customerLossService.findById(id);
+	}
+	
+	@RequestMapping("/updateStatus")
+	@ResponseBody
+	public ServerResponse updateStatus(Integer id,Integer status){
+		return customerLossService.updateStatus(id, status);
 	}
 	
 

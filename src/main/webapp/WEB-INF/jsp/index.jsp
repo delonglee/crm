@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 <script type="text/javascript">
 	function openTab(text, url, iconCls) {
+		
 		if ($("#tabs").tabs("exists", text)) {
 			$("#tabs").tabs("select", text);
 		} else {
@@ -129,29 +130,29 @@
 			<div title="服务管理" data-options="iconCls:'icon-fwgl'"
 				style="padding: 10px">
 				<a
-					href="javascript:openTab('服务创建','customerServiceCreate.jsp','icon-fwcj')"
+					href="javascript:openTab('服务创建','${ctx}/index/customerServiceSet.action','icon-fwcj')"
 					class="easyui-linkbutton"
 					data-options="plain:true,iconCls:'icon-fwcj'" style="width: 150px;">服务创建</a>
 				<a
-					href="javascript:openTab('服务分配','customerServiceAssign.jsp','icon-fwfp')"
+					href="javascript:openTab('服务分配','${ctx}/index/customerServceAllot.action','icon-fwfp')"
 					class="easyui-linkbutton"
 					data-options="plain:true,iconCls:'icon-fwfp'" style="width: 150px;">服务分配</a>
 				<a
-					href="javascript:openTab('服务处理','customerServiceProce.jsp','icon-fwcl')"
+					href="javascript:openTab('服务处理','${ctx}/index/customerServceDispose.action','icon-fwcl')"
 					class="easyui-linkbutton"
 					data-options="plain:true,iconCls:'icon-fwcl'" style="width: 150px;">服务处理</a>
 				<a
-					href="javascript:openTab('服务反馈','customerServiceFeedback.jsp','icon-fwfk')"
+					href="javascript:openTab('服务反馈','${ctx}/index/customerServceBack.action','icon-fwfk')"
 					class="easyui-linkbutton"
 					data-options="plain:true,iconCls:'icon-fwfk'" style="width: 150px;">服务反馈</a>
 				<a
-					href="javascript:openTab('服务归档','customerServiceFile.jsp','icon-fwgd')"
+					href="javascript:openTab('服务档案','${ctx}/index/customerServceSave.action','icon-fwgd')"
 					class="easyui-linkbutton"
-					data-options="plain:true,iconCls:'icon-fwgd'" style="width: 150px;">服务归档</a>
+					data-options="plain:true,iconCls:'icon-fwgd'" style="width: 150px;">服务档案</a>
 			</div>
 			<div title="统计报表" data-options="iconCls:'icon-tjbb'"
 				style="padding: 10px">
-				<a href="javascript:openTab('客户贡献分析','khgxfx.jsp','icon-khgxfx')"
+				<a href="javascript:openTab('客户贡献分析','${ctx}/index/customerContribute.action','icon-khgxfx')"
 					class="easyui-linkbutton"
 					data-options="plain:true,iconCls:'icon-khgxfx'"
 					style="width: 150px;">客户贡献分析</a> <a

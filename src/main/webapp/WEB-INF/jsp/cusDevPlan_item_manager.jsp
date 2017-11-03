@@ -53,7 +53,7 @@
 	//更新销售机会客户开发状态
 	function updateSaleChanceDevResult(devResult) {
 		$.post("${ctx}/saleChance/updateDevResult.action",
-			{saleChanceId:'${param.saleChanceId}',devResult:devResult},
+			{id:'${param.saleChanceId}',devResult:devResult},
 			function(result){
 				if (result.status === Util.SUCCESS) {
 					$.messager.alert("系统提示",'执行成功')

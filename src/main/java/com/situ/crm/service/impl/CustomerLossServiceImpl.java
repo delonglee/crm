@@ -103,8 +103,14 @@ public class CustomerLossServiceImpl implements ICustomerLossService{
 	}
 
 	@Override
-	public List<CustomerLoss> findCustomerLossStatus() {
+	public ServerResponse updateStatus(Integer id, Integer status) {
 		// TODO Auto-generated method stub
-		return null;
+		CustomerLoss customerLoss = new CustomerLoss();
+		customerLoss.setId(id);
+		customerLoss.setStatus(status);
+		if (customerLossMapper.updateByPrimaryKeySelective(customerLoss)>0) {
+			return ServerResponse.createSuccess("修改成功");
+		}
+		return ServerResponse.createError("修改失败");
 	}
 }

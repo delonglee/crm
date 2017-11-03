@@ -9,6 +9,7 @@ import com.situ.crm.common.EasyUIDataGrideResult;
 import com.situ.crm.common.ServerResponse;
 import com.situ.crm.pojo.Customer;
 import com.situ.crm.service.ICustomerService;
+import com.situ.crm.vo.CustomerContribute;
 
 @Controller
 @RequestMapping("/customer")
@@ -21,6 +22,12 @@ public class CustomerController {
 	@ResponseBody
 	public EasyUIDataGrideResult customerManager(Integer page,Integer rows,Customer customer){
 		return customerService.customerList(page, rows,customer);
+	}
+	
+	@RequestMapping("/customerContribute")
+	@ResponseBody
+	public EasyUIDataGrideResult customerContribute(Integer page,Integer rows,CustomerContribute customerContribute){
+		return customerService.findCustomerContribute(page, rows, customerContribute);
 	}
 	
 	@RequestMapping("/delete")

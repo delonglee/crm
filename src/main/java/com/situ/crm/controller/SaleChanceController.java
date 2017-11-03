@@ -72,9 +72,9 @@ public class SaleChanceController {
 	}
 	
 	@RequestMapping("/updateDevResult")
-	public ServerResponse updateDevResult(Integer saleChanceId, Integer devResult){
-		System.out.println(saleChanceId+devResult);
-		return saleChanceService.updateDevResult(saleChanceId, devResult);
+	@ResponseBody
+	public ServerResponse updateDevResult(Integer id, Integer devResult){
+		return saleChanceService.updateDevResult(id, devResult);
 	}
 
 }

@@ -257,8 +257,11 @@
   <select id="findDataDicName" resultMap="BaseResultMap">
   	SELECT DISTINCT data_dic_name FROM data_dic
   </select>
-  
    <select id="findLevel" resultMap="BaseResultMap">
   	SELECT data_dic_value FROM data_dic WHERE data_dic_name='客户等级'
+  </select>
+  
+    <select id="findService" resultMap="BaseResultMap">
+  	SELECT data_dic_value FROM data_dic WHERE data_dic_name='服务类型'
   </select>
 </mapper>

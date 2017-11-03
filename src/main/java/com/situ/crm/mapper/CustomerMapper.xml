@@ -552,4 +552,17 @@
       status = #{status,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  
+  <!-- 查询客户贡献信息 -->
+  <select id="findCustomerContribute" resultType="com.situ.crm.vo.CustomerContribute">
+  	SELECT c.name,SUM(oi.sum) AS contribute FROM customer AS c LEFT JOIN customer_order AS co ON c.id=co.customer_id
+	LEFT JOIN order_item AS oi ON co.id=oi.order_id
+	<where>
+		<if test="name != null and name !=''">
+			WHERE c.name LIKE '%${name}%'
+		</if>
+	
+	</where>
+	GROUP BY c.id ORDER BY contribute DESC
+  </select>
 </mapper>

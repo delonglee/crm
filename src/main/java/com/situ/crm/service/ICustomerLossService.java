@@ -17,11 +17,11 @@ public interface ICustomerLossService {
 	ServerResponse add(CustomerLoss customerLoss);
 
 	ServerResponse update(CustomerLoss customerLoss);
-	
-	
-	List<CustomerLoss> findCustomerLossStatus();
+
 
 	ServerResponse findById(Integer id);
+	
+	ServerResponse updateStatus(Integer id,Integer status);
 	
 	
 

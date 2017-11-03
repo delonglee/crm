@@ -88,4 +88,10 @@ public class CustomerLinkmanServiceImpl implements ICustomerLinkmanService{
 		return ServerResponse.createError("删除失败");
 	}
 
+	@Override
+	public List<CustomerLinkman> findLinkMan() {
+		// TODO Auto-generated method stub
+		return customerLinkmanMapper.findLinkMan();
+	}
+
 }

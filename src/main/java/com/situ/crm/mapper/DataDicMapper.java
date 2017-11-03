@@ -100,4 +100,6 @@ public interface DataDicMapper {
 	List<DataDic> findDataDicName();
 
 	List<DataDic> findLevel();
+	
+	List<DataDic> findService();
 }

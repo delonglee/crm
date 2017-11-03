@@ -1,5 +1,7 @@
 package com.situ.crm.service;
 
+import java.util.List;
+
 import com.situ.crm.common.EasyUIDataGrideResult;
 import com.situ.crm.common.ServerResponse;
 import com.situ.crm.pojo.CustomerLinkman;
@@ -15,6 +17,8 @@ public interface ICustomerLinkmanService {
 	ServerResponse update(CustomerLinkman customerLinkman);
 
 	ServerResponse deleteById(Integer id);
+
+	List<CustomerLinkman> findLinkMan();
 	
 
 	

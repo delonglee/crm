@@ -2,7 +2,9 @@ package com.situ.crm.service.impl;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.jws.soap.SOAPBinding.Use;
 
@@ -20,6 +22,7 @@ import com.situ.crm.pojo.CustomerExample;
 import com.situ.crm.pojo.CustomerExample.Criteria;
 import com.situ.crm.service.ICustomerService;
 import com.situ.crm.util.Util;
+import com.situ.crm.vo.CustomerContribute;
 
 @Service
 public class CustomerServiceImpl implements ICustomerService{
@@ -52,6 +55,27 @@ public class CustomerServiceImpl implements ICustomerService{
 		result.setTotal(total);
 		result.setRows(customerlist);
 		System.out.println(customer.getName());
+		return result;
+	}
+	
+	/*
+	 * 客户贡献值
+	 */
+	@Override
+	public EasyUIDataGrideResult findCustomerContribute(Integer page, Integer rows,
+			CustomerContribute customerContribute) {
+		// TODO Auto-generated method stub
+		EasyUIDataGrideResult result = new EasyUIDataGrideResult();
+		PageHelper.startPage(page, rows);
+		Map<String, Object> map = new HashMap<String,Object>();
+		if (StringUtils.isNotBlank(customerContribute.getName())) {
+			map.put("name", customerContribute.getName());
+		}
+		List<CustomerContribute> list = customerMapper.findCustomerContribute(map);
+		PageInfo<CustomerContribute> pageInfo = new PageInfo<>(list);
+		int total = (int) pageInfo.getTotal();
+		result.setTotal(total);
+		result.setRows(list);		
 		return result;
 	}
 
@@ -98,4 +122,6 @@ public class CustomerServiceImpl implements ICustomerService{
 			return ServerResponse.createError("查询失败");
 		}
 	}
+
+
 }

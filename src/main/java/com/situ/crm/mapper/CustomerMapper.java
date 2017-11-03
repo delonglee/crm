@@ -2,7 +2,11 @@ package com.situ.crm.mapper;
 
 import com.situ.crm.pojo.Customer;
 import com.situ.crm.pojo.CustomerExample;
+import com.situ.crm.vo.CustomerContribute;
+
 import java.util.List;
+import java.util.Map;
+
 import org.apache.ibatis.annotations.Param;
 
 public interface CustomerMapper {
@@ -93,4 +97,9 @@ public interface CustomerMapper {
      * @mbggenerated Mon Oct 30 13:49:55 CST 2017
      */
     int updateByPrimaryKey(Customer record);
+    
+    /*
+     * 用户贡献
+     */
+    List<CustomerContribute> findCustomerContribute(Map<String, Object> map);
 }

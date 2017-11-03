@@ -23,7 +23,7 @@ public interface ISaleChanceService {
 
 	ServerResponse findById(Integer id);
 	
-	ServerResponse updateDevResult(Integer saleChanceId, Integer devResult);
+	ServerResponse updateDevResult(Integer id, Integer devResult);
 	
 	
 

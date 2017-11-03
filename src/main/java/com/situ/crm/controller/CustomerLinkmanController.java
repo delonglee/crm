@@ -1,5 +1,7 @@
 package com.situ.crm.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -50,6 +52,12 @@ public class CustomerLinkmanController {
 	@ResponseBody
 	public ServerResponse deleteById(Integer id){
 		return customerLinkmanService.deleteById(id);
+	}
+	
+	@RequestMapping("/findLinkMan")
+	@ResponseBody
+	public List<CustomerLinkman> findLinkMan(){
+		return customerLinkmanService.findLinkMan();
 	}
 
 }

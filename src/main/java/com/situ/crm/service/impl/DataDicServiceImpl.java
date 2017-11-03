@@ -93,4 +93,10 @@ public class DataDicServiceImpl implements IDataDicService{
 		return dataDicMapper.findLevel();
 	}
 
+	@Override
+	public List<DataDic> findService() {
+		// TODO Auto-generated method stub
+		return dataDicMapper.findService();
+	}
+
 }
