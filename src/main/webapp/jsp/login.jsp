@@ -12,7 +12,7 @@
 	}
 </script>
 </head>
-<body class="easyui-layout" style="background-image: url('');" >
+<body class="easyui-layout" style="" >
 	<div style="margin-left: 450px;margin-top: 200px">
 		<div style="margin:20px 0;"></div>
 		<form action="${ctx}/login/login.action" id="form">
@@ -28,10 +28,9 @@
 					<span>记住密码</span>
 				</div>
 				<div>
-<!-- 					<a href="javascript:login();" class="easyui-linkbutton" data-options="iconCls:'icon-ok'" style="padding:5px 0px;width:100%;">
+ 				<a href="javascript:login();" class="easyui-linkbutton" data-options="iconCls:'icon-ok'" style="padding:5px 0px;width:100%;">
 						<span style="font-size:14px;">登录</span>
-					</a> -->
-					<button type="submit">登录</button>
+					</a>
 				</div>
 			</div>
 		</form>

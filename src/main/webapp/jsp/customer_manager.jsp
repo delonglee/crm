@@ -195,8 +195,8 @@
 			<a class="easyui-linkbutton" href="javascript:openUpdateDialog()" plain='true' style=" margin-right: 20px" iconCls="icon-edit">修改</a>
 			<a class="easyui-linkbutton" href="javascript:doDelete()" plain='true' style=" margin-right: 20px" iconCls="icon-remove">删除</a>
 			<a class="easyui-linkbutton" href="javascript:openLinkMan()" plain='true' style="margin-right: 20px" iconCls="icon-man">联系人管理</a>
-			<a class="easyui-linkbutton" href="javascript:openContact()" plain='true' style="margin-right: 20px" iconCls="icon-edit">交往记录管理</a>
-			<a class="easyui-linkbutton" href="javascript:openOrder()" plain='true' iconCls="icon-edit">历史订单管理</a>
+			<a class="easyui-linkbutton" href="javascript:openContact()" plain='true' style="margin-right: 20px" iconCls="icon-tip">交往记录管理</a>
+			<a class="easyui-linkbutton" href="javascript:openOrder()" plain='true' iconCls="icon-filter">历史订单管理</a>
 		</div>
 		<div>
 			客户编号：<input class="easyui-textbox" id="numId" data-options="prompt:'客户编号'" style="width:150px"></input>

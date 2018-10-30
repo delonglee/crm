@@ -166,6 +166,13 @@
 				}
 			});
 		}
+		function doExportExcel(){
+			$.messager.confirm('确认','确认导出该表格',function(r){
+				if (r) {
+					window.location.href="${ctx}/saleChance/exportExcel.action";
+				}
+			});					
+		}
 	</script>
 </head>
 <body>
@@ -178,6 +185,7 @@
 			<a class="easyui-linkbutton" href="javascript:openAddDialog()" iconCls="icon-add">创建</a>
 			<a class="easyui-linkbutton" href="javascript:openUpdateDialog()" iconCls="icon-edit">修改</a>
 			<a class="easyui-linkbutton" href="javascript:doDelete()" iconCls="icon-remove">删除</a>
+			<a class="easyui-linkbutton" href="javascript:doExportExcel()" iconCls="icon-add">导出表格</a>
 		</div>
 		<div>
 			客户名称：<input class="easyui-textbox" id="customerNames" data-options="prompt:'客户名称'" style="width:150px"></input>
